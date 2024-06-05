@@ -41,7 +41,7 @@ a {
 
 .btn {
   display: inline-block;
-  padding: $spacing-xs $spacing-md;
+  padding: $spacing-xs $spacing-md; // This is where the error was
   background-color: $primary-color;
   color: #fff;
   border: none;

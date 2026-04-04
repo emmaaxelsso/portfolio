@@ -1,19 +1,63 @@
-// Colors
-$primary-color: #7c3aed;
-$background-color: #0f0f0f;
-$text-color: #f5f5f5;
-$highlight-color: #ff007f;
+// ===========================
+// Color system — High Contrast Brutal
+// ===========================
 
+// Base
+$background-color: #111111;
+$surface-color: #1c1c1c;
+$text-color: #f5f5f5;
+$text-muted-color: #bdbdbd;
+$border-color: #2d2d2d;
+
+// Brand / Accent
+$primary-color: #2563eb;   // klar blå
+$secondary-color: #facc15; // stark gul
+$accent-color: #f97316;    // orange
+$danger-color: #ef4444;    // röd
+$success-color: #22c55e;   // grön
+
+// Optional highlight
+$highlight-color: $secondary-color;
+
+// ===========================
 // Spacing
+// ===========================
+$spacing-xs: 0.25rem;
 $spacing-sm: 0.5rem;
 $spacing-md: 1rem;
 $spacing-lg: 2rem;
 $spacing-xl: 4rem;
+$spacing-xxl: 6rem;
 
+// ===========================
 // Typography
+// ===========================
 $font-family-base: 'Inter', sans-serif;
 $font-family-heading: 'Inter Tight', sans-serif;
+
+$font-size-sm: 0.875rem;
 $font-size-base: 16px;
-$font-size-lg: 1.25rem;
+$font-size-lg: 1.125rem;
 $font-size-xl: 2rem;
-$font-size-xxl: 2.5rem;
+$font-size-xxl: 3rem;
+$font-size-display: 4.5rem;
+
+// ===========================
+// Radius
+// ===========================
+$radius-sm: 0.5rem;
+$radius-md: 0.75rem;
+$radius-lg: 1rem;
+$radius-xl: 1.5rem;
+
+// ===========================
+// Shadows
+// ===========================
+$shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.25);
+$shadow-hard: 6px 6px 0 rgba(0, 0, 0, 0.35);
+
+// ===========================
+// Transitions
+// ===========================
+$transition-fast: 0.2s ease;
+$transition-base: 0.3s ease;

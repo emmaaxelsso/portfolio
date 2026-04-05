@@ -172,6 +172,7 @@ small,
   background: $primary-color;
   color: #ffffff;
   box-shadow: $shadow-hard;
+  border-radius: 1.25rem;
 }
 
 .btn-primary:hover {
@@ -194,6 +195,7 @@ small,
   background: transparent;
   color: $text-color;
   border-color: $text-color;
+  border-radius: 1.25rem;
 }
 
 .btn-outline:hover {

@@ -3,50 +3,55 @@
 .hero {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  background: $background-color;
-  color: $text-color;
-  padding: $spacing-xl;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 5rem 2rem 3rem;
+  background:
+    radial-gradient(circle at 60% 10%, rgba(0, 0, 0, 0.08), transparent 35%),
+    $success-color;
 }
 
-.eyebrow {
-  font-size: $font-size-sm;
-  color: $text-muted-color;
-  margin-bottom: $spacing-sm;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+.section--next {
+  background: #fbf9ea;
+  color: #111;
 }
 
-h1 {
+.hero__content {
+  max-width: 720px;
+}
+
+.hero__title {
   font-family: $font-family-heading;
-  font-size: clamp(3rem, 8vw, 5.5rem);
-  font-weight: 800;
-  line-height: 0.95;
-  letter-spacing: -0.04em;
-  margin: 0 0 $spacing-md;
-  color: $secondary-color;
+  font-size: clamp(4.5rem, 11vw, 9rem);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  margin-bottom: 1.5rem;
+  color: #000000;
+  max-width: 10ch;
 }
 
-h2 {
-  font-size: 1.75rem;
+.hero__accent {
+  color: $secondary-color;
+  font-size: 3rem;
+  margin-left: 0.5rem;
+}
+
+.hero__subtitle {
+  font-family: $font-family-heading;
+  font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 500;
   color: $text-muted-color;
-  margin: 0 0 $spacing-md;
+  margin-bottom: 1rem;
 }
 
-.intro {
+.hero__description {
+  max-width: 700px;
   font-size: 1.125rem;
-  margin: 0 0 $spacing-xl;
-  color: $text-color;
 }
 
-.hero-actions {
+.hero__actions {
   display: flex;
-  gap: $spacing-md;
+  gap: 1rem;
+  margin-top: 3rem;
   flex-wrap: wrap;
-  justify-content: center;
 }

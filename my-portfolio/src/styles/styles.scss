@@ -172,28 +172,30 @@ small,
   background: $primary-color;
   color: #ffffff;
   box-shadow: $shadow-hard;
+  border-radius: 1.25rem;
 }
 
 .btn-primary:hover {
-  background: $secondary-color;
-  color: #111111;
+  background: #1634aa;
+  color: #ffffff;
 }
 
 .btn-secondary {
-  background: $accent-color;
+  background: $secondary-color;
   color: #111111;
   box-shadow: $shadow-hard;
 }
 
 .btn-secondary:hover {
-  background: $danger-color;
-  color: #ffffff;
+  background: #e0a800;
+  color: #111111;
 }
 
 .btn-outline {
   background: transparent;
   color: $text-color;
   border-color: $text-color;
+  border-radius: 1.25rem;
 }
 
 .btn-outline:hover {

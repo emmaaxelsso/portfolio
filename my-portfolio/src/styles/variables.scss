@@ -1,20 +1,21 @@
 // ===========================
-// Color system — High Contrast Brutal
+// Color system
 // ===========================
 
 // Base
-$background-color: #111111;
-$surface-color: #1c1c1c;
-$text-color: #f5f5f5;
-$text-muted-color: #bdbdbd;
-$border-color: #2d2d2d;
+$background-color: #0a0a0a;
+$surface-color: #111111;
+$text-color: #fbf9ea;
+$text-muted-color: #d6d1b8;
+$border-color: #2a2a2a;
 
 // Brand / Accent
-$primary-color: #2563eb;   // klar blå
-$secondary-color: #facc15; // stark gul
-$accent-color: #f97316;    // orange
-$danger-color: #ef4444;    // röd
-$success-color: #22c55e;   // grön
+$primary-color: #1c40cf;
+$secondary-color: #fcbe1d;
+$accent-color: #f83c00;
+$danger-color: #f83c00;
+$success-color: #017401;
+$font-color: #0a0a0a;
 
 // Optional highlight
 $highlight-color: $secondary-color;
@@ -33,7 +34,7 @@ $spacing-xxl: 6rem;
 // Typography
 // ===========================
 $font-family-base: 'Inter', sans-serif;
-$font-family-heading: 'Inter Tight', sans-serif;
+$font-family-heading: 'Space Grotesk', sans-serif;
 
 $font-size-sm: 0.875rem;
 $font-size-base: 16px;

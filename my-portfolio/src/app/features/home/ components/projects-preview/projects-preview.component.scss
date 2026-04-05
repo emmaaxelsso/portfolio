@@ -1,0 +1,60 @@
+@use '../../../../../styles/variables' as *;
+
+.projects-preview {
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+.projects-preview__header {
+  margin-bottom: $spacing-xl;
+  max-width: 700px;
+}
+
+.projects-preview__eyebrow {
+  font-family: $font-family-heading;
+  font-size: $font-size-sm;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $secondary-color;
+  margin-bottom: $spacing-sm;
+}
+
+.projects-preview__title {
+  margin: 0;
+}
+
+.projects-preview__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-lg;
+}
+
+.project-card {
+  background: #111111;
+  border: 2px solid #ffffff;
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-card__title {
+  font-size: 1.4rem;
+  margin-bottom: $spacing-sm;
+}
+
+.project-card__description {
+  margin: 0;
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .projects-preview__grid {
+    grid-template-columns: 1fr;
+  }
+}

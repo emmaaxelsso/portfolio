@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './about-preview.component.html',
-  styleUrl: './about-preview.component.css'
+  styleUrl: './about-preview.component.scss'
 })
 export class AboutPreviewComponent {}

@@ -1,0 +1,79 @@
+@use '../../../../../styles/variables' as *;
+
+.about-preview {
+  position: relative;
+  margin-top: -13rem;
+  padding-top: calc($spacing-xxl + 2rem);
+  background: #fbf9ea;
+  color: #111111;
+  z-index: 2;
+}
+
+.about-preview__container {
+  display: grid;
+  gap: $spacing-xl;
+}
+
+.about-preview__header {
+  max-width: 700px;
+}
+
+.about-preview__eyebrow {
+  font-family: $font-family-heading;
+  font-size: $font-size-sm;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $accent-color;
+  margin-bottom: $spacing-sm;
+}
+
+.about-preview__title {
+  color: #111111;
+  margin-bottom: 0;
+}
+
+.about-preview__content {
+  max-width: 760px;
+  display: grid;
+  gap: $spacing-md;
+}
+
+.about-preview__text {
+  color: #222222;
+  font-size: $font-size-lg;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.about-preview__highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: $spacing-lg;
+}
+
+.about-preview__card {
+  background: #ffffff;
+  border: 2px solid #111111;
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  box-shadow: $shadow-soft;
+}
+
+.about-preview__card h3 {
+  font-size: 1.25rem;
+  color: #111111;
+  margin-bottom: $spacing-sm;
+}
+
+.about-preview__card p {
+  margin: 0;
+  color: #333333;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .about-preview__highlights {
+    grid-template-columns: 1fr;
+  }
+}

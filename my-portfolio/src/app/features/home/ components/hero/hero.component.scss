@@ -99,3 +99,7 @@
 .hero__projects-btn:hover {
   transform: translateY(-50%) rotate(4deg) scale(1.05);
 }
+
+html {
+  scroll-behavior: smooth;
+}

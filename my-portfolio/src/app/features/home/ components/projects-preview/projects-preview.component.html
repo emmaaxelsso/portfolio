@@ -1,10 +1,35 @@
-<section class="projects-preview">
-  <app-section-title title="Projekt"></app-section-title>
+<section id="projects" class="projects-preview section">
+  <div class="container">
 
-  <div class="projects-grid">
-    <app-project-card
-      *ngFor="let project of projects"
-      [project]="project">
-    </app-project-card>
+    <div class="projects-preview__header">
+      <p class="projects-preview__eyebrow">Projects</p>
+      <h2 class="projects-preview__title">Some things I’ve built</h2>
+    </div>
+
+    <div class="projects-preview__grid">
+
+      <div class="project-card">
+        <h3 class="project-card__title">Portfolio</h3>
+        <p class="project-card__description">
+          This webpage! A portfolio for myself.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-card__title">An Interactive Language Map</h3>
+        <p class="project-card__description">
+          A project for my bachelors thesis. A language map on region level that fetched data from wikidata and displayed it on an interactive map.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-card__title">Eventi</h3>
+        <p class="project-card__description">
+          A project where we worked according to the agile principles to create a website for events.
+        </p>
+      </div>
+
+    </div>
+
   </div>
 </section>

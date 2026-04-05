@@ -9,11 +9,9 @@ import { PROJECTS } from '../../../../core/constants/projects.data';
   standalone: true,
   imports: [
     CommonModule,
-    SectionTitleComponent,
-    ProjectCardComponent
   ],
   templateUrl: './projects-preview.component.html',
-  styleUrl: './projects-preview.component.css'
+  styleUrl: './projects-preview.component.scss'
 })
 export class ProjectsPreviewComponent {
   projects = PROJECTS;

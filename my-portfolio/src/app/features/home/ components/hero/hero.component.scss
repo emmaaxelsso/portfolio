@@ -1,11 +1,14 @@
 @use '../../../../../styles/variables' as *;
 
 .hero {
+  position: relative;
+  z-index: 1;
   min-height: 100vh;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 5rem 2rem 3rem;
+  padding: 5rem 2rem 7rem;
+  position: relative;
   background:
     radial-gradient(circle at 60% 10%, rgba(0, 0, 0, 0.08), transparent 35%),
     $success-color;
@@ -54,4 +57,45 @@
   gap: 1rem;
   margin-top: 3rem;
   flex-wrap: wrap;
+}
+
+.hero__layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: end;
+}
+
+.hero__content {
+  max-width: 760px;
+}
+
+.hero__aside {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.hero__projects-btn {
+  position: absolute;
+
+  right: 18%;
+  top: 35%;
+  transform: translateY(-50%) rotate(10deg);
+
+  min-width: 180px;
+  min-height: 80px;
+
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  border-radius: 999px;
+  padding: 1.2rem 2rem;
+
+  box-shadow: $shadow-hard;
+}
+
+.hero__projects-btn:hover {
+  transform: translateY(-50%) rotate(4deg) scale(1.05);
 }

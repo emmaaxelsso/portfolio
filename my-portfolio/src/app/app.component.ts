@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ButtonComponent } from './shared/components/button/button.component';
+import { HomeComponent } from './features/home/home.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, ButtonComponent],
+  imports: [HomeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

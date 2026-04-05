@@ -3,50 +3,54 @@
 .hero {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  background: $background-color;
+  align-items: flex-start;
+  text-align: left;
+  padding: 6rem 2rem;
+  background: $success-color;
   color: $text-color;
-  padding: $spacing-xl;
 }
 
-.eyebrow {
-  font-size: $font-size-sm;
-  color: $text-muted-color;
-  margin-bottom: $spacing-sm;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+.section--next {
+  background: #fbf9ea;
+  color: #111;
 }
 
-h1 {
+.hero__content {
+  max-width: 800px;
+}
+
+.hero__title {
   font-family: $font-family-heading;
   font-size: clamp(3rem, 8vw, 5.5rem);
   font-weight: 800;
   line-height: 0.95;
   letter-spacing: -0.04em;
-  margin: 0 0 $spacing-md;
-  color: $secondary-color;
+  margin-bottom: $spacing-md;
+  color: $font-color;
 }
 
-h2 {
-  font-size: 1.75rem;
+.hero__accent {
+  color: $secondary-color;
+  font-size: 3rem;
+  margin-left: 0.5rem;
+}
+
+.hero__subtitle {
+  font-size: 2rem;
   font-weight: 500;
   color: $text-muted-color;
-  margin: 0 0 $spacing-md;
+  margin-bottom: $spacing-md;
 }
 
-.intro {
+.hero__description {
   font-size: 1.125rem;
-  margin: 0 0 $spacing-xl;
   color: $text-color;
+  margin-bottom: $spacing-xl;
 }
 
-.hero-actions {
+.hero__actions {
   display: flex;
+  justify-content: center;
   gap: $spacing-md;
   flex-wrap: wrap;
-  justify-content: center;
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { PROJECTS } from '../../../../core/constants/projects.data';
 
 @Component({
@@ -13,4 +14,10 @@ import { PROJECTS } from '../../../../core/constants/projects.data';
 })
 export class ProjectsPreviewComponent {
   projects = PROJECTS;
+
+  constructor(private router: Router) {}
+
+  goToProject(slug: string) {
+    this.router.navigate(['/projects', slug]);
+  }
 }

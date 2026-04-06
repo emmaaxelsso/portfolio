@@ -18,6 +18,7 @@ export class ProjectsPreviewComponent {
   constructor(private router: Router) {}
 
   goToProject(slug: string) {
+    console.log('clicked project:', slug);
     this.router.navigate(['/projects', slug]);
   }
 }

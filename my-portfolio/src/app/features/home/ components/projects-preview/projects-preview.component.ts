@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SectionTitleComponent } from '../../../../shared/components/section-title/section-title.component';
-import { ProjectCardComponent } from '../../../../shared/components/project-card/project-card.component';
+import { Router } from '@angular/router';
 import { PROJECTS } from '../../../../core/constants/projects.data';
 
 @Component({
@@ -15,4 +14,11 @@ import { PROJECTS } from '../../../../core/constants/projects.data';
 })
 export class ProjectsPreviewComponent {
   projects = PROJECTS;
+
+  constructor(private router: Router) {}
+
+  goToProject(slug: string) {
+    console.log('clicked project:', slug);
+    this.router.navigate(['/projects', slug]);
+  }
 }

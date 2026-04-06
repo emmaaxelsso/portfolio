@@ -1,0 +1,90 @@
+@use '../../../../styles/variables' as *;
+
+.project-detail {
+  min-height: 100vh;
+  padding: $spacing-xxl 0;
+  background: $background-color;
+  color: $text-color;
+}
+
+.project-detail__back {
+  display: inline-block;
+  margin-bottom: $spacing-lg;
+  color: $text-muted-color;
+  transition: color $transition-fast;
+}
+
+.project-detail__back:hover {
+  color: $secondary-color;
+}
+
+.project-detail__eyebrow {
+  margin-bottom: $spacing-sm;
+  color: $secondary-color;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: $font-size-sm;
+  font-weight: 700;
+}
+
+.project-detail__title {
+  margin-bottom: $spacing-md;
+}
+
+.project-detail__description {
+  max-width: 65ch;
+  margin-bottom: $spacing-xl;
+  color: $text-muted-color;
+}
+
+.project-detail__meta {
+  display: grid;
+  gap: $spacing-lg;
+  margin-bottom: $spacing-xl;
+}
+
+.project-detail__block {
+  padding: $spacing-lg;
+  background: $surface-color;
+  border: 1px solid $border-color;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-soft;
+}
+
+.project-detail__block h2 {
+  margin-bottom: $spacing-sm;
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: $secondary-color;
+}
+
+.project-detail__block p,
+.project-detail__block li {
+  color: $text-muted-color;
+}
+
+.project-detail__block ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+}
+
+.project-detail__block li {
+  padding: 0.45rem 0.8rem;
+  border: 1px solid $border-color;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.project-detail__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-md;
+}
+
+@media (min-width: 768px) {
+  .project-detail__meta {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

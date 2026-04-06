@@ -7,28 +7,16 @@
     </div>
 
     <div class="projects-preview__grid">
-
-      <div class="project-card">
-        <h3 class="project-card__title">Portfolio</h3>
-        <p class="project-card__description">
-          This webpage! A portfolio for myself.
-        </p>
+      <div 
+        class="project-card" 
+        *ngFor="let project of projects"
+        tabindex="0"
+        (click)="goToProject(project.slug)"
+        (keydown.enter)="goToProject(project.slug)"
+      >
+        <h3 class="project-card__title">{{ project.title }}</h3>
+        <p class="project-card__description">{{ project.description }}</p>
       </div>
-
-      <div class="project-card">
-        <h3 class="project-card__title">An Interactive Language Map</h3>
-        <p class="project-card__description">
-          A project for my bachelors thesis. A language map on region level that fetched data from wikidata and displayed it on an interactive map.
-        </p>
-      </div>
-
-      <div class="project-card">
-        <h3 class="project-card__title">Eventi</h3>
-        <p class="project-card__description">
-          A project where we worked according to the agile principles to create a website for events.
-        </p>
-      </div>
-
     </div>
 
   </div>

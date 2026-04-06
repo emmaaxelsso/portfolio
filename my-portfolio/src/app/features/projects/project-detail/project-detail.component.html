@@ -33,7 +33,7 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        GitHub
+        {{ project.repoLabel || 'Repository' }}
       </a>
 
       <a
@@ -46,6 +46,10 @@
         Live demo
       </a>
     </div>
+
+    <p *ngIf="project.slug === 'eventi'" class="project-detail__note">
+      Private repository (Chalmers GitLab – login required)
+    </p>
   </div>
 
   <ng-template #notFound>

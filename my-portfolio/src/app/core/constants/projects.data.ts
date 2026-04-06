@@ -6,7 +6,8 @@ export const PROJECTS = [
     longDescription:
       'My personal portfolio built in Angular to showcase my projects, background, and skills.',
     techStack: ['Angular', 'TypeScript', 'SCSS'],
-    githubUrl: 'https://github.com/your-link-here',
+    githubUrl: 'https://github.com/emmaaxelsso/portfolio.git',
+    repoLabel: 'GitHub',
     liveUrl: '',
     role: 'Designer and developer',
     learnings:
@@ -20,7 +21,8 @@ export const PROJECTS = [
     longDescription:
       'This project was created for my bachelor thesis. It displays languages on a regional level and fetches data from Wikidata to present them in an interactive map.',
     techStack: ['JavaScript', 'Wikidata', 'Maps'],
-    githubUrl: '',
+    githubUrl: 'https://github.com/hannamagn/InteractiveLanguageMap2.git',
+    repoLabel: 'GitHub',
     liveUrl: '',
     role: 'Developer',
     learnings:
@@ -34,7 +36,8 @@ export const PROJECTS = [
     longDescription:
       'Eventi was a group project where we applied agile principles to design and build a website for events.',
     techStack: ['HTML', 'CSS', 'JavaScript'],
-    githubUrl: '',
+    githubUrl: 'https://git.chalmers.se/timnie/eventi.git',
+    repoLabel: 'GitLab',
     liveUrl: '',
     role: 'Frontend developer in a team project',
     learnings:

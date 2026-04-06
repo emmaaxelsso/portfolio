@@ -5,6 +5,47 @@
     <p class="project-detail__eyebrow">Project</p>
     <h1 class="project-detail__title">{{ project.title }}</h1>
     <p class="project-detail__description">{{ project.longDescription }}</p>
+
+    <div class="project-detail__meta">
+      <div class="project-detail__block">
+        <h2>Role</h2>
+        <p>{{ project.role }}</p>
+      </div>
+
+      <div class="project-detail__block">
+        <h2>Tech stack</h2>
+        <ul>
+          <li *ngFor="let tech of project.techStack">{{ tech }}</li>
+        </ul>
+      </div>
+
+      <div class="project-detail__block">
+        <h2>What I learned</h2>
+        <p>{{ project.learnings }}</p>
+      </div>
+    </div>
+
+    <div class="project-detail__links">
+      <a
+        *ngIf="project.githubUrl"
+        class="btn btn-outline"
+        [href]="project.githubUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub
+      </a>
+
+      <a
+        *ngIf="project.liveUrl"
+        class="btn btn-primary"
+        [href]="project.liveUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Live demo
+      </a>
+    </div>
   </div>
 
   <ng-template #notFound>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { PROJECTS } from '../../../core/constants/projects.data';
@@ -10,10 +10,14 @@ import { PROJECTS } from '../../../core/constants/projects.data';
   templateUrl: './project-detail.component.html',
   styleUrls: ['./project-detail.component.scss']
 })
-export class ProjectDetailComponent {
+export class ProjectDetailComponent implements OnInit {
   project = PROJECTS.find(
     (project) => project.slug === this.route.snapshot.paramMap.get('slug')
   );
 
   constructor(private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    window.scrollTo(0, 0);
+  }
 }

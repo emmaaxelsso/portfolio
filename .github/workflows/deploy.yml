@@ -1,0 +1,62 @@
+name: Publicera portfolio
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hämta koden
+        uses: actions/checkout@v6
+
+      - name: Installera Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: my-portfolio/package-lock.json
+
+      - name: Konfigurera GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Installera beroenden
+        working-directory: my-portfolio
+        run: npm ci
+
+      - name: Bygg hemsidan
+        working-directory: my-portfolio
+        run: npm run build -- --configuration production --base-href /
+
+      - name: Förbered sidlänkar och domän
+        run: |
+          cp my-portfolio/dist/my-portfolio/browser/index.html my-portfolio/dist/my-portfolio/browser/404.html
+          cp CNAME my-portfolio/dist/my-portfolio/browser/CNAME
+          touch my-portfolio/dist/my-portfolio/browser/.nojekyll
+
+      - name: Ladda upp hemsidan
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: my-portfolio/dist/my-portfolio/browser
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicera
+        id: deployment
+        uses: actions/deploy-pages@v4

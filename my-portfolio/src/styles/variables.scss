@@ -62,3 +62,12 @@ $shadow-hard: 6px 6px 0 rgba(0, 0, 0, 0.35);
 // ===========================
 $transition-fast: 0.2s ease;
 $transition-base: 0.3s ease;
+
+// ===========================
+// Light sections
+// ===========================
+$light-background-color: $text-color;
+$light-text-color: $font-color;
+$light-border-color: $font-color;
+$light-surface-color: #ffffff;
+$light-placeholder-color: #e9e5d4;

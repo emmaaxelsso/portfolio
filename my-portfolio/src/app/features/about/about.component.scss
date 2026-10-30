@@ -183,8 +183,48 @@
   color: $accent-color;
   font-size: $font-size-lg;
   font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 0.3em;
+  text-decoration: none;
+  cursor: pointer;
+
+  transform-origin: left center;
+  transition: transform $transition-fast;
+
+  &:hover {
+    transform: scale(1.06);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $accent-color;
+    outline-offset: 6px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+.back-link {
+  display: inline-block;
+  color: $light-text-color;
+  font-size: $font-size-base;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $accent-color;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $accent-color;
+    outline-offset: 6px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 }
 
 @media (max-width: 700px) {

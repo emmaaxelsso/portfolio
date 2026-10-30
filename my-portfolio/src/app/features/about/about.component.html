@@ -2,7 +2,7 @@
 
 <main class="about-page">
   <div class="container">
-        <a routerLink="/" class="project-detail__back">← Back to home</a>
+        <a routerLink="/" class="back-link">← Back to home</a>
 
     <header class="about-intro">
       <div>
@@ -14,8 +14,8 @@
 
         </p>
 
-        <a class="text-link" href="#contact">
-          Get in touch <span aria-hidden="true">↗</span>
+        <a class="text-link" routerLink="/about" fragment="contact">
+        Get in touch <span aria-hidden="true">↗</span>
         </a>
       </div>
 
@@ -42,7 +42,7 @@
         <p>
           Away from the keyboard, you’ll most likely find me in the forest with my dog. 
           We spend a lot of time exploring trails, running together, and practising dog training, though withvarying levels of agreement on what we’re supposed to be doing.
-          We also spend a lot of time in the Norwegian mountains, hiking in summer and skiing in winter. 
+          I also spend a lot of time in the Norwegian mountains, hiking in summer and skiing in winter. 
         </p>
       </div>
     </section>
@@ -54,7 +54,7 @@
       <div class="education-list">
         <article class="education-card">
           <p class="education-card__date">2025 — Present</p>
-          <h3>MSc Programme in Software Engineering and Technology - 120 hp</h3>
+          <h3>MSc Programme in Software Engineering and Technology</h3>
           <p class="education-card__school">
             Chalmers University of Technology · Gothenburg, Sweden
           </p>
@@ -90,13 +90,30 @@
             Chalmers University of Technology · Gothenburg, Sweden
           </p>
           <p>
-            [A short description of the programme.]
+            My bachelor's studies gave me a foundation in programming,
+            software design, computer engineering, and mathematics.
+            Through practical assignments and group projects, I developed
+            both my technical skills and my ability to work with others
+            to build software.
           </p>
+        <h4>Bachelor’s thesis — An Interactive Language Map</h4>
+        <p>
 
-          <h4>Bachelor's thesis</h4>
-          <p>
-            [Your thesis title, what you explored, and your contribution.]
-          </p>
+  Together with my thesis group, I developed an interactive
+  web application for exploring the geographical distribution
+  of languages. The project used data from Wikidata to
+  visualise languages at a regional level, combining
+  software development with geographical data visualisation.
+</p>
+
+<a
+  class="text-link"
+  href="https://github.com/hannamagn/InteractiveLanguageMap2"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  View project on GitHub ↗
+</a>
 
           <h4>Selected courses</h4>
           <ul class="course-list">
@@ -133,28 +150,46 @@
       </div>
     </section>
 
-    <!-- KONTAKT -->
     <section
       id="contact"
       class="about-section contact"
       aria-labelledby="contact-title"
     >
-      <p class="eyebrow">Contact</p>
-      <h2 id="contact-title">Let's get in touch.</h2>
-      <p>
-        [A short invitation to connect or talk about opportunities.]
-      </p>
+<p class="eyebrow">Contact</p>
+<h2 id="contact-title">Let's get in touch.</h2>
 
-      <!-- Byt platshållarna mot riktiga länkar när du fyller i sidan. -->
-      <ul class="contact-list">
-        <li>Email: [your email address]</li>
-        <li>LinkedIn: [your profile URL]</li>
-        <li>GitHub: [your profile URL]</li>
-      </ul>
+<p>
+  Have a project in mind, an opportunity to share, or just
+  want to say hello? I'd love to hear from you.
+</p>
 
-      <!-- Exempel på en klickbar mejllänk:
-      <a class="text-link" href="mailto:din-adress">Din mejladress</a>
-      -->
+<ul class="contact-list">
+  <li>
+    <a class="text-link" href="mailto:emmaaxelsson.ax@gmail.com">
+      Email me ↗
+    </a>
+  </li>
+  <li>
+    <a
+      class="text-link"
+      href="https://www.linkedin.com/in/emma-axelsson-3b94a416a"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      LinkedIn ↗
+    </a>
+  </li>
+  <li>
+    <a
+      class="text-link"
+      href="https://github.com/emmaaxelsso"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      GitHub ↗
+    </a>
+  </li>
+</ul>
     </section>
 
   </div>

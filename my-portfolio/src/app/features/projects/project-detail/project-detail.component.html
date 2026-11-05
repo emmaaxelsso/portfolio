@@ -11,7 +11,7 @@
 
     <div class="project-detail__meta">
       <div class="project-detail__block">
-        <h2>Role</h2>
+        <h2>My contribution</h2>
         <p>{{ project.role }}</p>
       </div>
 
@@ -38,6 +38,16 @@
       >
         {{ project.repoLabel || 'Repository' }}
       </a>
+
+      <a
+      *ngIf="project.slug === 'interactive-language-map'"
+      class="btn btn-outline"
+      href="https://hdl.handle.net/20.500.12380/310684"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Read the bachelor’s thesis
+    </a>
 
       <a
         *ngIf="project.liveUrl"

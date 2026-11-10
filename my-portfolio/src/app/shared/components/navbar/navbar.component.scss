@@ -1,3 +1,5 @@
+@use '../../../../styles/variables' as *;
+
 .navbar {
   height: 72px;
   padding: 0 2rem;
@@ -6,6 +8,7 @@
   justify-content: space-between;
   background: #0b0b0b;
   color: #f7f2df;
+  border-bottom: 1px solid rgba($text-color, 0.15);
 
   a {
     color: inherit;

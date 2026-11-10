@@ -1,0 +1,127 @@
+@use '../../../styles/variables' as *;
+
+:host {
+  display: block;
+}
+
+.projects-page {
+  min-height: 100vh;
+  padding: $spacing-xl 0 $spacing-xxl;
+  background: $background-color;
+  color: $text-color;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: $spacing-xl;
+  color: $text-muted-color;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+.projects-page__header {
+  margin-bottom: $spacing-xl;
+}
+
+.eyebrow {
+  margin-bottom: $spacing-md;
+  color: $secondary-color;
+  font-size: $font-size-sm;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.projects-page__intro {
+  max-width: 60ch;
+  color: $text-muted-color;
+  font-size: $font-size-lg;
+  line-height: 1.7;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: $spacing-lg;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding: $spacing-lg;
+  background: $surface-color;
+  border: 2px solid $text-muted-color;
+  border-radius: $radius-lg;
+  transition:
+    transform $transition-fast,
+    border-color $transition-fast;
+
+  h2 {
+    font-size: $font-size-xl;
+    line-height: 1.1;
+  }
+
+  p {
+    color: $text-muted-color;
+    line-height: 1.7;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: $secondary-color;
+  }
+
+  &__link {
+    margin-top: auto;
+    padding-top: $spacing-lg;
+    color: $secondary-color;
+    font-weight: 700;
+  }
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+
+  li {
+    padding: $spacing-xs $spacing-sm;
+    border: 1px solid $border-color;
+    border-radius: $radius-sm;
+    color: $text-muted-color;
+    font-size: $font-size-sm;
+  }
+}
+
+.back-link:focus-visible,
+.project-card:focus-visible {
+  outline: 2px solid $secondary-color;
+  outline-offset: 6px;
+}
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back-link,
+  .project-card {
+    transition: none;
+  }
+
+  .project-card:hover {
+    transform: none;
+  }
+}

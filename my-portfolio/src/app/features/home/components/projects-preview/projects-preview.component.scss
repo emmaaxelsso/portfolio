@@ -59,3 +59,35 @@
     grid-template-columns: 1fr;
   }
 }
+
+.projects-preview__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 2.5rem;
+
+  color: $secondary-color;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  transform-origin: left center;
+  transition: transform $transition-fast;
+
+  &:hover {
+    transform: scale(1.06);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $secondary-color;
+    outline-offset: 6px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}

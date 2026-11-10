@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { PROJECTS } from '../../../../core/constants/projects.data';
 
 @Component({
@@ -8,6 +8,7 @@ import { PROJECTS } from '../../../../core/constants/projects.data';
   standalone: true,
   imports: [
     CommonModule,
+    RouterLink
   ],
   templateUrl: './projects-preview.component.html',
   styleUrl: './projects-preview.component.scss'

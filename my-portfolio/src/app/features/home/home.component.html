@@ -1,4 +1,36 @@
 <app-navbar></app-navbar>
-<app-hero></app-hero>
-<app-about-preview></app-about-preview>
-<app-projects-preview></app-projects-preview>
+
+<main class="home">
+  <div class="home__thread" aria-hidden="true">
+    <svg
+      viewBox="0 0 1000 1000"
+      preserveAspectRatio="none"
+      focusable="false"
+    >
+      <path
+        #threadPath
+        class="home__thread-path"
+        d="
+        M 510 105
+        C 580 45, 740 40, 850 90
+        C 980 145, 965 215, 840 250
+        C 690 290, 650 345, 810 395
+        C 970 445, 980 510, 830 555
+        C 670 605, 650 675, 820 725
+        C 970 775, 970 845, 810 890
+        C 710 920, 740 960, 865 980
+        "
+        pathLength="1"
+        fill="none"
+        stroke="#f83c00"
+        stroke-width="4"
+        stroke-linecap="round"
+        vector-effect="non-scaling-stroke"
+      />
+    </svg>
+  </div>
+
+  <app-hero></app-hero>
+  <app-about-preview></app-about-preview>
+  <app-projects-preview></app-projects-preview>
+</main>

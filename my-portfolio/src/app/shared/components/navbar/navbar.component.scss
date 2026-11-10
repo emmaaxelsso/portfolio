@@ -2,13 +2,18 @@
 
 .navbar {
   height: 72px;
-  padding: 0 2rem;
+  padding-block: 0;
+  padding-inline: max(1rem, calc((100% - 1120px) / 2));
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #0b0b0b;
-  color: #f7f2df;
-  border-bottom: 1px solid rgba($text-color, 0.15);
+  background-color: #0b0b0b;
+  background-image: radial-gradient(
+    circle,
+    rgba($secondary-color, 0.3) 1px,
+    transparent 1px
+  );
+  background-size: 16px 16px;
 
   a {
     color: inherit;
@@ -29,8 +34,16 @@
       font-size: 0.95rem;
 
       &:hover {
-        opacity: 0.7;
-      }
+      text-decoration: underline;
+      text-underline-offset: 0.3em;
+      text-decoration-thickness: 2px;
     }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding-inline: 0.625rem;
   }
 }

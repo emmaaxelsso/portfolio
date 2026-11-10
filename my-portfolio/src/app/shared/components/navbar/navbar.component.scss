@@ -31,7 +31,8 @@
     gap: 1.5rem;
 
     a {
-      font-size: 0.95rem;
+      font-size: 1rem;
+      font-weight: 500;
 
       &:hover {
       text-decoration: underline;
@@ -42,8 +43,16 @@
   }
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    padding-inline: 0.625rem;
+@media (max-width: 480px) {
+  .navbar__brand {
+    font-size: 1rem;
+  }
+
+  .navbar__links {
+    gap: 1rem;
+  }
+
+  .navbar__links a {
+    font-size: 0.95rem;
   }
 }

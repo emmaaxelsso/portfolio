@@ -166,7 +166,6 @@ private rebuildCheckpoints(): void {
       return;
     }
 
-    // Remove clipping from the previous animation.
     svg.style.clipPath = 'none';
 
     if (window.scrollY <= 1) {
@@ -185,9 +184,8 @@ private rebuildCheckpoints(): void {
     const start = path.getPointAtLength(0).matrixTransform(matrix);
     const scroll = Math.max(0, window.scrollY);
 
-    // Gradually increase the drawing speed over the first 300px.
     const acceleration = Math.min(scroll / 300, 1);
-    const drawingDistance = scroll * (0.7 + 1.3 * acceleration);
+    const drawingDistance = scroll * (0.35 + 1.65 * acceleration);
 
     const remainingScroll = Math.max(
       0,
@@ -196,7 +194,6 @@ private rebuildCheckpoints(): void {
         window.scrollY
     );
 
-    // Gradually finish the thread over the last 300px.
     const finishProgress =
       1 - Math.min(remainingScroll / 300, 1);
 

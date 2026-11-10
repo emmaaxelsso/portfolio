@@ -4,14 +4,14 @@ export const PROJECTS = [
     slug: 'portfolio',
     description: 'This webpage! A portfolio for me, myself and I.',
     longDescription:
-      'My personal portfolio built in Angular to showcase my projects, background, and skills.',
+      'My personal portfolio built in Angular to present my projects and background. I wanted to create a portfolio that was fun, personal and easy to explore. ',
     techStack: ['Angular', 'TypeScript', 'SCSS'],
     githubUrl: 'https://github.com/emmaaxelsso/portfolio.git',
     repoLabel: 'GitHub',
     liveUrl: '',
-    role: 'Designer and developer',
+    role: 'I designed and developed everything on this website.',
     learnings:
-      'I learned more about Angular components, routing, and structuring a personal project.'
+      'I learned more about Angular components, routing, and responsive styling.'
   },
   {
     title: 'An Interactive Language Map',
@@ -32,10 +32,10 @@ export const PROJECTS = [
     title: 'Eventi',
     slug: 'eventi',
     description:
-      'A project where we worked according to the agile principles to create a website for events.',
+      'An event website built as a team project using agile development practices.',
     longDescription:
-      'Eventi was a group project where we applied agile principles to design and build a website for events.',
-    techStack: ['HTML', 'CSS', 'JavaScript'],
+      'Eventi was a university team project where we designed and developed an event website. We used agile practices to organise the work and develop the application together.',
+    techStack: ['HTML', 'CSS', 'TypeScript', 'TSX', 'MongoDB'],
     githubUrl: 'https://git.chalmers.se/timnie/eventi.git',
     repoLabel: 'GitLab',
     liveUrl: '',

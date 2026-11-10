@@ -216,6 +216,18 @@ small,
   color: $secondary-color;
 }
 
+.home app-hero .hero,
+.home app-about-preview .about-preview {
+  z-index: auto;
+}
+
+.home app-hero .hero__content,
+.home app-about-preview .about-preview__container,
+.home app-projects-preview .container {
+  position: relative;
+  z-index: 4;
+}
+
 // ===========================
 // Responsive helpers
 // ===========================

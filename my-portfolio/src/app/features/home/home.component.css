@@ -25,6 +25,7 @@
 
 .home__thread-path {
   stroke: #f83c00;
+  stroke-opacity: 0.8;
 }
 
 @media (max-width: 768px) {

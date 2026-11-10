@@ -3,6 +3,7 @@
 .projects-preview {
   background: #0a0a0a;
   color: #ffffff;
+  padding-top: 4rem;
 }
 
 .projects-preview__header {
@@ -26,7 +27,7 @@
 
 .projects-preview__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: $spacing-lg;
 }
 
@@ -36,6 +37,8 @@
   border-radius: $radius-lg;
   padding: $spacing-lg;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-width: 0;
+  overflow-wrap: anywhere;
   cursor: pointer;
 }
 
@@ -56,7 +59,7 @@
 
 @media (max-width: 900px) {
   .projects-preview__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 

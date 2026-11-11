@@ -6,5 +6,6 @@ import { NavbarComponent } from '../../shared/components/navbar/navbar.component
   standalone: true,
   imports: [NavbarComponent],
   templateUrl: './research.component.html',
+  styleUrl: './research.component.scss',
 })
 export class ResearchComponent {}

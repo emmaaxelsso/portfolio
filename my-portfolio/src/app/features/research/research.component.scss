@@ -1,0 +1,57 @@
+@use '../../../styles/variables' as *;
+
+:host {
+  display: block;
+}
+
+.research-page {
+  min-height: 100vh;
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  background: #f4dfe4;
+  color: #111111;
+
+  p {
+    color: inherit;
+    line-height: 1.7;
+  }
+}
+
+.research-intro {
+  max-width: 720px;
+
+  p {
+    margin-bottom: 0;
+    font-size: $font-size-lg;
+  }
+}
+
+.research-section {
+  margin-top: clamp(2rem, 5vw, 4rem);
+
+  h2 {
+    line-height: 1.1;
+  }
+
+  p {
+    max-width: 65ch;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.research-section[aria-labelledby='research-project-title'] {
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  background: $light-background-color;
+  border: 2px solid $light-border-color;
+  border-radius: $radius-lg;
+}
+
+.research-page .research-eyebrow {
+  color: $primary-color;
+  font-size: $font-size-sm;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

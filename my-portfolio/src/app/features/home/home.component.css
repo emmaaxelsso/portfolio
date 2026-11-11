@@ -30,8 +30,12 @@
 
 @media (max-width: 768px) {
   .home__thread {
-    left: auto;
-    width: 48px;
-    right: 0;
+    inset-inline: 0;
+    width: auto;
+  }
+
+  .home__thread-path {
+    stroke-width: 4px;
+    stroke-opacity: 0.15;
   }
 }

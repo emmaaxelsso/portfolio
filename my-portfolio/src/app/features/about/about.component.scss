@@ -249,3 +249,55 @@
     padding: 1.5rem;
   }
 }
+
+.course-years {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: $spacing-lg;
+  margin-top: 1.5rem;
+}
+
+.course-years__group {
+  min-width: 0;
+}
+
+.course-years__group h5,
+.additional-courses h5 {
+  margin: 0 0 $spacing-md;
+  font-family: $font-family-heading;
+  font-size: $font-size-lg;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: normal;
+}
+
+.course-years__group .course-list {
+  margin: 0;
+}
+
+.course-years__group .course-list li {
+  margin-bottom: 0.75rem;
+  overflow-wrap: anywhere;
+}
+
+.additional-courses {
+  margin-top: $spacing-lg;
+  padding-top: 1.5rem;
+  border-top: 1px solid $light-placeholder-color;
+}
+
+@media (max-width: 900px) {
+  .course-years {
+    grid-template-columns: 1fr;
+  }
+}
+
+.course-years--master {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .course-years--master {
+    grid-template-columns: 1fr;
+  }
+}

@@ -14,7 +14,7 @@ import { PROJECTS } from '../../../../core/constants/projects.data';
   styleUrl: './projects-preview.component.scss'
 })
 export class ProjectsPreviewComponent {
-  projects = PROJECTS;
+  projects = PROJECTS.filter((project) => project.slug !== 'portfolio');
 
   constructor(private router: Router) {}
 

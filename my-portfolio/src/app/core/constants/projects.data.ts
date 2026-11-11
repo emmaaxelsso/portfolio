@@ -42,5 +42,21 @@ export const PROJECTS = [
     role: 'Frontend developer in a team project',
     learnings:
       'I learned more about teamwork, agile processes, and building user-focused interfaces.'
-  }
+  },
+
+  {
+  title: 'Myrestaulvegen',
+  slug: 'myrestaulvegen',
+  description: 'A digital guest guide for our family’s house in Norway. Still a work in progress.',
+  longDescription:
+    'I’m building a website where guests can find travel information, practical details about the house, and tips for exploring the Gausta area. It is not yet published.',
+  techStack: ['Astro', 'CSS', 'javascript'],
+  githubUrl: '',
+  repoLabel: 'GitHub',
+  liveUrl: '',
+  role:
+    'I’m designing and developing the site, including its shared layout, navigation, and guest information pages.',
+  learnings:
+    'I’m learning how to organise practical information so guests can quickly find what they need before and during their stay.'
+},
 ];

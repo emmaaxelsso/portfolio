@@ -15,6 +15,7 @@ import { AboutPreviewComponent } from './components/about-preview/about-preview.
 import { ProjectsPreviewComponent } from './components/projects-preview/projects-preview.component';
 import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
 import { ResearchPreviewComponent } from './components/research-preview/research-preview.component';
+import { ContactPreviewComponent } from './components/contact-preview/contact-preview.component';
 
 @Component({
   selector: 'app-home',
@@ -24,7 +25,8 @@ import { ResearchPreviewComponent } from './components/research-preview/research
     AboutPreviewComponent,
     ProjectsPreviewComponent,
     ResearchPreviewComponent,
-    NavbarComponent
+    NavbarComponent,
+    ContactPreviewComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'

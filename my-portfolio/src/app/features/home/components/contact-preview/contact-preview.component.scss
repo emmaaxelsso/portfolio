@@ -1,0 +1,16 @@
+@use '../../../../../styles/variables' as *;
+
+.contact-preview {
+  padding: $spacing-xl 0;
+  background: $light-background-color;
+  color: $light-text-color;
+
+  a:hover {
+    color: $primary-color;
+  }
+
+  a:focus-visible {
+    outline: 2px solid $primary-color;
+    outline-offset: 4px;
+  }
+}

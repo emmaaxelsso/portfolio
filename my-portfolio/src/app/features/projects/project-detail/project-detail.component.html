@@ -1,34 +1,23 @@
 <app-navbar></app-navbar>
+
 <section class="project-detail section">
-  <div class="container" *ngIf="project; else notFound">
+  <div class="container" *ngIf="project() as project; else notFound">
     <a routerLink="/" fragment="projects" class="project-detail__back">
-  ← Back to projects
-</a>
+      ← Back to projects
+    </a>
 
     <p class="project-detail__eyebrow">Project</p>
     <h1 class="project-detail__title">{{ project.title }}</h1>
     <p class="project-detail__description">{{ project.longDescription }}</p>
 
-    <figure *ngIf="project.slug === 'eventi'" style="margin: 0 0 2rem;">
+    <figure *ngIf="project.image as image" class="project-detail__image">
       <img
-        src="assets/images/eventi_home.png"
-        alt="Eventi homepage with options to sign up, find events, or host an event"
-        width="3024"
-        height="1788"
-        style="display: block; width: 100%; height: auto; border-radius: 1rem;"
+        [src]="image.src"
+        [alt]="image.alt"
+        [width]="image.width"
+        [height]="image.height"
       />
     </figure>
-
-    <figure
-  *ngIf="project.slug === 'interactive-language-map'"
-  style="margin: 0 0 2rem;"
->
-  <img
-    src="assets/images/languagePopup.png"
-    alt="Interactive world map with a language information popup open"
-    style="display: block; width: 100%; height: auto; border-radius: 1rem;"
-  />
-</figure>
 
     <div class="project-detail__meta">
       <div class="project-detail__block">
@@ -49,48 +38,21 @@
       </div>
     </div>
 
-    <div class="project-detail__links">
-  <a
-    *ngIf="project.githubUrl && project.slug !== 'eventi'"
-    class="btn btn-outline"
-    [href]="project.githubUrl"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    {{ project.repoLabel || 'Repository' }}
-  </a>
+    <div *ngIf="project.links as links" class="project-detail__links">
+      <a
+        *ngFor="let link of links"
+        class="btn btn-outline"
+        [href]="link.url"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {{ link.label }}
+      </a>
+    </div>
 
-  <a
-    *ngIf="project.slug === 'interactive-language-map'"
-    class="btn btn-outline"
-    href="https://hdl.handle.net/20.500.12380/310684"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Read the bachelor’s thesis
-  </a>
-
-  <a
-    *ngIf="project.liveUrl"
-    class="btn btn-primary"
-    [href]="project.liveUrl"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Live demo
-  </a>
-</div>
-
-<p *ngIf="project.slug === 'eventi'" class="project-detail__note">
-  Source code is private on Chalmers GitLab.
-</p>
-
-<p
-  *ngIf="project.slug === 'eventi' || project.slug === 'myrestaulvegen'"
-  class="project-detail__note"
->
-  The repository is private because it contains personal information.
-</p>
+    <p *ngIf="project.repositoryNote as note" class="project-detail__note">
+      {{ note }}
+    </p>
   </div>
 
   <ng-template #notFound>

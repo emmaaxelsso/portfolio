@@ -1,25 +1,16 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, RouterLink } from '@angular/router';
-import { PROJECTS } from '../../../../core/constants/projects.data';
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+
+import { PROJECTS } from '../../../projects/projects.data';
 
 @Component({
   selector: 'app-projects-preview',
   standalone: true,
-  imports: [
-    CommonModule,
-    RouterLink
-  ],
+  imports: [CommonModule, RouterLink],
   templateUrl: './projects-preview.component.html',
-  styleUrl: './projects-preview.component.scss'
+  styleUrl: './projects-preview.component.scss',
 })
 export class ProjectsPreviewComponent {
-  projects = PROJECTS.filter((project) => project.slug !== 'portfolio');
-
-  constructor(private router: Router) {}
-
-  goToProject(slug: string) {
-    console.log('clicked project:', slug);
-    this.router.navigate(['/projects', slug]);
-  }
+    readonly projects = PROJECTS.filter((project) => project.showOnHome);
 }

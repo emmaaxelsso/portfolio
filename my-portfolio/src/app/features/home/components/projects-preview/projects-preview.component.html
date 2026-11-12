@@ -7,16 +7,14 @@
     </div>
 
     <div class="projects-preview__grid">
-      <div 
-        class="project-card" 
+      <a
         *ngFor="let project of projects"
-        tabindex="0"
-        (click)="goToProject(project.slug)"
-        (keydown.enter)="goToProject(project.slug)"
+        class="project-card"
+        [routerLink]="['/projects', project.slug]"
       >
         <h3 class="project-card__title">{{ project.title }}</h3>
         <p class="project-card__description">{{ project.description }}</p>
-      </div>
+      </a>
     </div>
     <a routerLink="/projects" class="projects-preview__link">
   View all projects <span aria-hidden="true">→</span>

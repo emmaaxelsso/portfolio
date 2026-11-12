@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { PROJECTS } from '../../../core/constants/projects.data';
+import { map } from 'rxjs';
+
+import { PROJECTS } from '../projects.data';
 import { NavbarComponent } from '../../../shared/components/navbar/navbar.component';
 
 @Component({
@@ -9,12 +12,17 @@ import { NavbarComponent } from '../../../shared/components/navbar/navbar.compon
   standalone: true,
   imports: [CommonModule, RouterLink, NavbarComponent],
   templateUrl: './project-detail.component.html',
-  styleUrls: ['./project-detail.component.scss']
+  styleUrl: './project-detail.component.scss',
 })
 export class ProjectDetailComponent {
-  project = PROJECTS.find(
-    (project) => project.slug === this.route.snapshot.paramMap.get('slug')
-  );
+  private readonly route = inject(ActivatedRoute);
 
-  constructor(private route: ActivatedRoute) {}
+  readonly project = toSignal(
+    this.route.paramMap.pipe(
+      map((params) => {
+        const slug = params.get('slug');
+        return PROJECTS.find((project) => project.slug === slug);
+      }),
+    ),
+  );
 }

@@ -1,0 +1,91 @@
+<app-navbar></app-navbar>
+
+<main class="research-detail">
+  <div class="container">
+    <a routerLink="/research" class="back-link">
+      <span aria-hidden="true">←</span> Back to research
+    </a>
+
+    <header class="research-detail__header">
+      <p class="research-eyebrow">Chalmers course project · 2026</p>
+      <h1>The Influence of SRS Components on AI-Generated Code Quality</h1>
+      <p>
+        We investigate how different parts of a software requirements
+        specification (SRS) influence the functional correctness and
+        structural quality of code produced by an AI coding agent.
+      </p>
+      <p>
+        <strong>This study is ongoing.</strong> The findings below are
+        preliminary and come from our pilot experiment. I’ll share the
+        final findings and a link to the report here once the project
+        is complete.
+      </p>
+    </header>
+
+    <section class="research-detail__section" aria-labelledby="study-questions">
+      <h2 id="study-questions">Research questions</h2>
+      <ol class="research-detail__questions">
+        <li>
+          <strong>RQ1.</strong> Which SRS components have the greatest influence on the quality of
+AI-generated code?
+        </li>
+        <li>
+          <strong>RQ2.</strong> How does the omission of specific SRS components influence
+functional correctness and structural quality in AI-generated code?
+        </li>
+      </ol>
+    </section>
+
+    <section class="research-detail__section" aria-labelledby="study-method">
+      <h2 id="study-method">Pilot methodology</h2>
+      <p>
+        We compared six versions of the specification for the same to-do
+        list application. The complete specification served as the baseline.
+        Four variants each omitted one section, and a sixth contained only
+        functional requirements. We kept the coding agent’s configuration
+        fixed and ran it five times per variant, producing 30 implementations.
+      </p>
+      <p>
+        We evaluated functional correctness using a shared suite of 39 JUnit
+        tests and used SonarQube to collect static code metrics. Repeating each
+        generation let us examine how much the implementations varied even
+        when the specification stayed the same.
+      </p>
+    </section>
+
+    <section class="research-detail__section" aria-labelledby="study-findings">
+      <h2 id="study-findings">Preliminary findings</h2>
+      <p>Implementations that passed every test retained in the analysis:</p>
+
+      <dl class="research-detail__comparison">
+        <div>
+          <dt>Complete specification</dt>
+          <dd>5 out of 5</dd>
+        </div>
+        <div>
+          <dt>Functional requirements only</dt>
+          <dd>0 out of 5</dd>
+        </div>
+      </dl>
+
+      <p>
+        In the variant that omitted non-functional requirements, the generated
+        code was shorter and had less documentation than the baseline.
+        Omitting data requirements coincided with fewer issues reported by
+        SonarQube and fewer explicit error checks. We therefore interpreted
+        the issue counts alongside what we observed in the code.
+      </p>
+    </section>
+
+    <section class="research-detail__section" aria-labelledby="study-scope">
+      <h2 id="study-scope">Limitations</h2>
+      <p>
+        The pilot used one application and five runs per specification, so
+        smaller effects may have gone undetected. Some requirements also
+        appeared in more than one section, meaning that information could
+        still be present after we removed a section. The test results cover
+        the behaviours exercised by the shared test suite.
+      </p>
+    </section>
+  </div>
+</main>

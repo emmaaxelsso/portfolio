@@ -1,4 +1,4 @@
-@import './variables';
+@use './variables' as *;
 
 // ===========================
 // Global reset
@@ -83,8 +83,7 @@ p {
   color: $text-color;
 }
 
-small,
-.text-muted {
+small {
   color: $text-muted-color;
 }
 
@@ -111,31 +110,6 @@ small,
 ::selection {
   background: $secondary-color;
   color: #111111;
-}
-
-// ===========================
-// Brutal utility accents
-// ===========================
-.highlight-blue {
-  color: $primary-color;
-}
-
-.highlight-yellow {
-  color: $secondary-color;
-}
-
-.highlight-orange {
-  color: $accent-color;
-}
-
-// ===========================
-// Shared card style
-// ===========================
-.card {
-  background: $surface-color;
-  border: 1px solid $border-color;
-  border-radius: $radius-lg;
-  box-shadow: $shadow-soft;
 }
 
 // ===========================
@@ -166,29 +140,6 @@ small,
 
 .btn:active {
   transform: translateY(0);
-}
-
-.btn-primary {
-  background: $primary-color;
-  color: #ffffff;
-  box-shadow: $shadow-hard;
-  border-radius: 1.25rem;
-}
-
-.btn-primary:hover {
-  background: #1634aa;
-  color: #ffffff;
-}
-
-.btn-secondary {
-  background: $secondary-color;
-  color: #111111;
-  box-shadow: $shadow-hard;
-}
-
-.btn-secondary:hover {
-  background: #e0a800;
-  color: #111111;
 }
 
 .btn-outline {

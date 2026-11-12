@@ -1,0 +1,14 @@
+@use './variables' as *;
+
+@mixin tag-list($border-color) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+
+  li {
+    padding: $spacing-xs $spacing-sm;
+    border: 1px solid $border-color;
+    border-radius: $radius-sm;
+    font-size: $font-size-sm;
+  }
+}

@@ -1,8 +1,6 @@
-<app-navbar></app-navbar>
-
 <main class="about-page">
   <div class="container">
-        <a routerLink="/" class="back-link">← Back to home</a>
+        <a appBackLink routerLink="/" class="back-link" label="Back to home"></a>
 
     <header class="about-intro">
       <div>
@@ -14,8 +12,8 @@
 
         </p>
 
-        <a class="text-link" routerLink="/about" fragment="contact">
-        Get in touch <span class="link-arrow" aria-hidden="true">↗</span>
+        <a class="text-link" routerLink="/contact">
+          Get in touch <span class="link-arrow" aria-hidden="true">↗</span>
         </a>
       </div>
 

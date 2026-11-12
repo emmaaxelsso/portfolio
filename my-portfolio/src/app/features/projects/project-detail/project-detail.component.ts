@@ -1,20 +1,26 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { PROJECTS } from '../../../core/constants/projects.data';
-import { NavbarComponent } from '../../../shared/components/navbar/navbar.component';
+import { map } from 'rxjs';
+import { PROJECTS } from '../projects.data';
 
 @Component({
   selector: 'app-project-detail',
   standalone: true,
-  imports: [CommonModule, RouterLink, NavbarComponent],
+  imports: [CommonModule, RouterLink],
   templateUrl: './project-detail.component.html',
-  styleUrls: ['./project-detail.component.scss']
+  styleUrl: './project-detail.component.scss',
 })
 export class ProjectDetailComponent {
-  project = PROJECTS.find(
-    (project) => project.slug === this.route.snapshot.paramMap.get('slug')
-  );
+  private readonly route = inject(ActivatedRoute);
 
-  constructor(private route: ActivatedRoute) {}
+  readonly project = toSignal(
+    this.route.paramMap.pipe(
+      map((params) => {
+        const slug = params.get('slug');
+        return PROJECTS.find((project) => project.slug === slug);
+      }),
+    ),
+  );
 }

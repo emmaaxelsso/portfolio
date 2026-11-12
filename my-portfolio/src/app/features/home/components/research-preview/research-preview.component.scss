@@ -1,0 +1,58 @@
+@use '../../../../../styles/variables' as *;
+
+:host {
+  display: block;
+}
+
+.research-preview {
+  padding-block: 4rem;
+  background: #f4dfe4;
+  color: #111111;
+
+  h2 {
+    max-width: 22ch;
+    line-height: 1.1;
+  }
+
+  p {
+    max-width: 60ch;
+    color: inherit;
+    line-height: 1.7;
+  }
+
+  .research-preview__eyebrow {
+    margin-bottom: $spacing-sm;
+    color: #1C40CF;
+    font-family: $font-family-heading;
+    font-size: $font-size-sm;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+}
+
+.research-preview__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  color: #1C40CF;
+  font-weight: 700;
+  text-underline-offset: 0.25em;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .research-preview {
+    padding-block: 3rem;
+  }
+}

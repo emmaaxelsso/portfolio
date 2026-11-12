@@ -1,5 +1,3 @@
-<app-navbar></app-navbar>
-
 <main class="research-page">
   <div class="container">
     <a routerLink="/" class="back-link">
@@ -15,8 +13,8 @@
       </p>
     </header>
 
-    <div class="research-grid">
-      <a routerLink="/research/ai-code-quality" class="research-card">
+    <div class="grid research-grid">
+      <a appCard routerLink="/research/ai-code-quality" class="research-card">
         <p class="research-eyebrow">Chalmers course project · 2026</p>
         <h2>Requirements and AI‑generated code</h2>
 
@@ -36,7 +34,7 @@
         </span>
       </a>
 
-      <article class="research-card">
+      <article appCard class="research-card">
         <p class="research-eyebrow">Upcoming research</p>
         <h2>Master’s thesis</h2>
         <p>I’ll share more about my thesis here once the project is underway.</p>

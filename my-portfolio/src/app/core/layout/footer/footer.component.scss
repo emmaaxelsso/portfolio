@@ -1,0 +1,13 @@
+@use '../../../../styles/variables' as *;
+
+.site-footer {
+  padding-block: $spacing-md;
+  background: $background-color;
+  color: $text-muted-color;
+
+  p {
+    margin: 0;
+    color: inherit;
+    font-size: $font-size-sm;
+  }
+}

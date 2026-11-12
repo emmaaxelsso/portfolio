@@ -13,7 +13,6 @@ import { isPlatformBrowser } from '@angular/common';
 import { HeroComponent } from './components/hero/hero.component';
 import { AboutPreviewComponent } from './components/about-preview/about-preview.component';
 import { ProjectsPreviewComponent } from './components/projects-preview/projects-preview.component';
-import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
 import { ResearchPreviewComponent } from './components/research-preview/research-preview.component';
 import { ContactPreviewComponent } from './components/contact-preview/contact-preview.component';
 
@@ -25,7 +24,6 @@ import { ContactPreviewComponent } from './components/contact-preview/contact-pr
     AboutPreviewComponent,
     ProjectsPreviewComponent,
     ResearchPreviewComponent,
-    NavbarComponent,
     ContactPreviewComponent
   ],
   templateUrl: './home.component.html',

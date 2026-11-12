@@ -1,4 +1,5 @@
 @use '../../../../styles/variables' as *;
+@use '../../../../styles/typography';
 
 .project-detail {
   min-height: 100vh;
@@ -19,12 +20,7 @@
 }
 
 .project-detail__eyebrow {
-  margin-bottom: $spacing-sm;
-  color: $secondary-color;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: $font-size-sm;
-  font-weight: 700;
+  @include typography.eyebrow($secondary-color);
 }
 
 .project-detail__title {

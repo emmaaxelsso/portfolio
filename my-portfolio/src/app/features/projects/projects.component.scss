@@ -1,6 +1,6 @@
 @use '../../../styles/variables' as *;
 @use '../../../styles/typography';
-@use '../../../styles/tag-list';
+@use '../../../styles/back-link';
 
 :host {
   display: block;
@@ -14,14 +14,7 @@
 }
 
 .back-link {
-  display: inline-block;
-  margin-bottom: $spacing-xl;
-  color: $text-muted-color;
-  transition: color $transition-fast;
-
-  &:hover {
-    color: $secondary-color;
-  }
+  @include back-link.back-link($spacing-xl);
 }
 
 .projects-page__header {
@@ -74,12 +67,8 @@
 }
 
 .tech-list {
-  @include tag-list.tag-list($border-color);
+  --tag-text-color: #{$text-muted-color};
   margin-bottom: $spacing-md;
-
-  li {
-    color: $text-muted-color;
-  }
 }
 
 .back-link:focus-visible,

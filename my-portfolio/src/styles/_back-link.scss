@@ -1,0 +1,12 @@
+@use './variables' as *;
+
+@mixin back-link($margin-bottom) {
+  display: inline-block;
+  margin-bottom: $margin-bottom;
+  color: $text-muted-color;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $secondary-color;
+  }
+}

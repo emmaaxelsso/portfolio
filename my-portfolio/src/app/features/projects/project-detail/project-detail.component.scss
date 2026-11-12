@@ -1,22 +1,16 @@
 @use '../../../../styles/variables' as *;
 @use '../../../../styles/typography';
+@use '../../../../styles/back-link';
 
 .project-detail {
   min-height: 100vh;
-  padding: $spacing-xxl 0;
+  padding: $spacing-xl 0 $spacing-xxl;
   background: $background-color;
   color: $text-color;
 }
 
 .project-detail__back {
-  display: inline-block;
-  margin-bottom: $spacing-lg;
-  color: $text-muted-color;
-  transition: color $transition-fast;
-}
-
-.project-detail__back:hover {
-  color: $secondary-color;
+  @include back-link.back-link($spacing-lg);
 }
 
 .project-detail__eyebrow {
@@ -93,5 +87,15 @@
     width: 100%;
     height: auto;
     border-radius: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .project-detail {
+    padding-top: 3rem;
+  }
+
+  .project-detail__back {
+    margin-bottom: $spacing-lg;
   }
 }

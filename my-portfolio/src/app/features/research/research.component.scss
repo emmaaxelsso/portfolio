@@ -78,7 +78,7 @@ a.research-card {
 }
 
 .research-card__tags {
-  @include tag-list.tag-list($light-placeholder-color);
+  --tag-border-color: #{$light-placeholder-color};
   margin: 0 0 $spacing-lg;
   padding: 0;
   list-style: none;

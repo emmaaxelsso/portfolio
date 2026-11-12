@@ -13,26 +13,25 @@
       </p>
     </header>
 
-    <div class="grid research-grid">
-      <a appCard routerLink="/research/ai-code-quality" class="research-card">
-        <p class="research-eyebrow">Chalmers course project · 2026</p>
-        <h2>Requirements and AI‑generated code</h2>
+      <div class="grid research-grid">
+    @for (study of studies; track study.slug) {
+      <a appCard [routerLink]="['/research', study.slug]" class="research-card">
+        <p class="research-eyebrow">{{ study.subtitle }}</p>
+        <h2>{{ study.title }}</h2>
+        <p>{{ study.description }}</p>
 
-        <p>
-          We compared 30 versions of a to-do list app to see how leaving out
-          parts of the requirements affects app behaviour and code quality.
-        </p>
-
-        <ul class="research-card__tags" aria-label="Methods and tools">
-          <li>Controlled experiment</li>
-          <li>JUnit</li>
-          <li>SonarQube</li>
-        </ul>
+        <ul
+          appTagList
+          [tags]="study.tags"
+          class="research-card__tags"
+          aria-label="Methods and tools"
+        ></ul>
 
         <span class="research-card__action">
           View study <span aria-hidden="true">→</span>
         </span>
       </a>
+    }
 
       <article appCard class="research-card">
         <p class="research-eyebrow">Upcoming research</p>

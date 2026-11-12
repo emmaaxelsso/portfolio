@@ -1,0 +1,10 @@
+@use '../../../../styles/variables' as *;
+@use '../../../../styles/tag-list';
+
+:host {
+  @include tag-list.tag-list(var(--tag-border-color, #{$border-color}));
+}
+
+li {
+  color: var(--tag-text-color, inherit);
+}

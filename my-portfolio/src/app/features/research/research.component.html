@@ -2,31 +2,46 @@
 
 <main class="research-page">
   <div class="container">
+    <a routerLink="/" class="back-link">
+      <span aria-hidden="true">←</span> Back to home
+    </a>
+
     <header class="research-intro">
+      <p class="research-eyebrow">Research</p>
       <h1>Research &amp; interests</h1>
-      <p>
+      <p class="research-intro__description">
         I’m interested in how the way we write requirements and organise
         software projects shapes the software we build.
       </p>
     </header>
 
-    <section class="research-section" aria-labelledby="research-project-title">
-      <p class="research-eyebrow">Research project</p>
-      <h2 id="research-project-title">Requirements and AI-generated code</h2>
+    <div class="research-grid">
+      <a routerLink="/research/ai-code-quality" class="research-card">
+        <p class="research-eyebrow">Chalmers course project · 2026</p>
+        <h2>Requirements and AI‑generated code</h2>
 
-      <p>
-        In a study with a colleague, we asked whether changing what goes into
-        a software requirements specification affects the quality of the code
-        an AI model generates.
-      </p>
+        <p>
+          We compared 30 versions of a to-do list app to see how leaving out
+          parts of the requirements affects app behaviour and code quality.
+        </p>
 
-      <p>
-        We created six versions of the specification for the same to-do list
-        application and generated five applications from each version.
-        We evaluated the 30 applications using 39 JUnit tests and static
-        analysis with SonarQube.
-      </p>
-    </section>
+        <ul class="research-card__tags" aria-label="Methods and tools">
+          <li>Controlled experiment</li>
+          <li>JUnit</li>
+          <li>SonarQube</li>
+        </ul>
+
+        <span class="research-card__action">
+          View study <span aria-hidden="true">→</span>
+        </span>
+      </a>
+
+      <article class="research-card">
+        <p class="research-eyebrow">Upcoming research</p>
+        <h2>Master’s thesis</h2>
+        <p>I’ll share more about my thesis here once the project is underway.</p>
+      </article>
+    </div>
 
     <section class="research-section" aria-labelledby="research-interests-title">
       <h2 id="research-interests-title">What I’m curious about</h2>

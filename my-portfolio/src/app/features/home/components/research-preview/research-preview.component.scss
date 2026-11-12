@@ -7,27 +7,60 @@
 .research-preview {
   padding-block: 4rem;
   background: #f4dfe4;
-  color: #111111;
+  color: $light-text-color;
+}
+
+.research-preview__header {
+  margin-bottom: $spacing-xl;
 
   h2 {
-    max-width: 22ch;
+    margin: 0;
     line-height: 1.1;
+  }
+}
+
+.research-preview__eyebrow {
+  margin-bottom: $spacing-sm;
+  color: $primary-color;
+  font-family: $font-family-heading;
+  font-size: $font-size-sm;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.research-preview__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: $spacing-lg;
+}
+
+.research-preview__card {
+  padding: $spacing-lg;
+  background: $light-background-color;
+  color: inherit;
+  border: 2px solid $light-border-color;
+  border-radius: $radius-lg;
+
+  h3 {
+    margin-bottom: $spacing-sm;
+    font-size: 1.4rem;
+    line-height: 1.15;
   }
 
   p {
-    max-width: 60ch;
+    margin: 0;
     color: inherit;
-    line-height: 1.7;
+    line-height: 1.6;
   }
+}
 
-  .research-preview__eyebrow {
-    margin-bottom: $spacing-sm;
-    color: #1C40CF;
-    font-family: $font-family-heading;
-    font-size: $font-size-sm;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+a.research-preview__card {
+  text-decoration: none;
+  transition: transform $transition-fast;
+
+  &:hover {
+    transform: translateY(-6px);
   }
 }
 
@@ -35,24 +68,44 @@
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  margin-top: 0.75rem;
-  color: #1C40CF;
+  margin-top: 2.5rem;
+  color: $primary-color;
+  font-size: 1.25rem;
   font-weight: 700;
-  text-underline-offset: 0.25em;
+  text-decoration: none;
+  transform-origin: left center;
+  transition: transform $transition-fast;
 
-  &:hover,
-  &:focus-visible {
-    text-decoration: underline;
+  &:hover {
+    transform: scale(1.06);
   }
+}
 
-  &:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 4px;
+a.research-preview__card:focus-visible,
+.research-preview__link:focus-visible {
+  outline: 2px solid $primary-color;
+  outline-offset: 6px;
+}
+
+@media (max-width: 900px) {
+  .research-preview__grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .research-preview {
     padding-block: 3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a.research-preview__card,
+  .research-preview__link {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
   }
 }

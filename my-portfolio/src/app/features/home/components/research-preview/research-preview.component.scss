@@ -56,6 +56,7 @@
 a.research-preview__card {
   text-decoration: none;
   transition: transform $transition-fast;
+  box-shadow: $shadow-soft;
 
   &:hover {
     transform: translateY(-6px);

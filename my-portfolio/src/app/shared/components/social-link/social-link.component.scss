@@ -1,0 +1,53 @@
+@use '../../../../styles/variables' as *;
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 44px;
+  padding: 0.8rem 1.1rem;
+  border: 2px solid $light-border-color;
+  border-radius: 999px;
+  background: $light-surface-color;
+  color: $light-text-color;
+  font-weight: 600;
+
+  &:focus-visible {
+    outline: 2px solid $accent-color;
+    outline-offset: 6px;
+  }
+
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    transition: transform $transition-fast;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.social-link:not(.social-link--hero) {
+  padding-inline: 1.4rem;
+  font-size: $font-size-lg;
+}
+
+.social-link--hero {
+  border-color: transparent;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.22);
+  }
+
+  &:focus-visible {
+    outline-color: currentColor;
+  }
+}
+
+.social-link__icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}

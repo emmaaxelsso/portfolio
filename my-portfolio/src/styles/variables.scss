@@ -6,16 +6,28 @@
 $background-color: #0a0a0a;
 $surface-color: #111111;
 $text-color: #fbf9ea;
-$text-muted-color: #d6d1b8;
+$text-muted-color: #FBF9EA;
 $border-color: #2a2a2a;
 
 // Brand / Accent
 $primary-color: #1c40cf;
 $secondary-color: #fcbe1d;
 $accent-color: #f83c00;
-$success-color: #017401;
 $font-color: #0a0a0a;
-$research-background-color: #f4dfe4;
+
+// Navbar & Hero
+$navbar-background-color: #0a0a0a;
+$hero-background-color: #087B42;
+
+// Section backgrounds
+$light-background-color: #fbf9ea;
+$research-background-color: #ebcbc2;
+
+// Light sections
+$light-text-color: $font-color;
+$light-border-color: $font-color;
+$light-surface-color: #ffffff;
+$light-placeholder-color: #e9e5d4;
 
 // ===========================
 // Spacing

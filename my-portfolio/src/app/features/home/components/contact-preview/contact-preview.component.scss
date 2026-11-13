@@ -6,6 +6,10 @@
   color: $light-text-color;
 }
 
+.contact-preview__description {
+  color: inherit;
+}
+
 .contact-preview__link {
   display: inline-flex;
   align-items: center;

@@ -1,6 +1,6 @@
 <section class="project-detail section">
   <div class="container" *ngIf="project() as project; else notFound">
-    <a routerLink="/" fragment="projects" class="project-detail__back">
+    <a routerLink="/projects" class="project-detail__back">
       ← Back to projects
     </a>
 
@@ -56,9 +56,9 @@
   <ng-template #notFound>
     <div class="container">
       <p>Project not found.</p>
-      <a routerLink="/" fragment="projects">
-        ← Back to projects
-      </a>
+    <a routerLink="/projects" class="project-detail__back">
+      ← Back to projects
+    </a>
     </div>
   </ng-template>
 </section>

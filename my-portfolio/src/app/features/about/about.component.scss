@@ -181,24 +181,18 @@
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
-
   transform-origin: left center;
-  transition: transform $transition-fast;
-
-  &:hover {
-    transform: scale(1.06);
-  }
 
   &:focus-visible {
     outline: 2px solid $accent-color;
     outline-offset: 6px;
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    transition: none;
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    transition: transform $transition-fast;
 
     &:hover {
-      transform: none;
+      transform: scale(1.06);
     }
   }
 }

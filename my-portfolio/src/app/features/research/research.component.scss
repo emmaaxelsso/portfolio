@@ -65,13 +65,10 @@
 
 a.research-card {
   text-decoration: none;
-  transition:
-    transform $transition-fast,
-    border-color $transition-fast;
+  transition: transform $transition-fast;
 
   &:hover {
     transform: translateY(-4px);
-    border-color: $primary-color;
   }
 }
 

@@ -8,9 +8,13 @@
     ></a>
 
     <h1>Contact</h1>
-
+    <p>
+Hiring, building something cool, or just looking for an excuse to click the copy icon? I’d love to hear from you.
+    </p>
+      <p class="contact-page__availability">
+        <span><strong>Available for software engineering roles from mid-June 2027.</strong></span>
+      </p>
     <ul class="grid contact-page__channels" aria-label="Contact and profiles">
-
       <li class="contact-page__profiles">
         <app-social-link platform="linkedin"></app-social-link>
         <app-social-link platform="github"></app-social-link>
@@ -18,10 +22,41 @@
       </li>
 
       <li class="contact-page__email">
-        <a appCard class="contact-card" href="mailto:emmaaxelsson.ax@gmail.com">
+        <article appCard class="contact-card">
           <span class="contact-card__label">Email</span>
-          <span class="contact-card__value">emmaaxelsson.ax&#64;gmail.com</span>
-        </a>
+
+          <div class="contact-card__actions">
+            <a class="contact-card__value" [href]="'mailto:' + email">
+              {{ email }}
+            </a>
+
+            <div class="contact-card__copy">
+              <button
+                type="button"
+                (click)="copyEmail()"
+                aria-label="Copy email address"
+                title="Copy email address"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="8" y="3" width="13" height="13" rx="2" />
+                  <path d="M16 20a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V9a1 1 0 0 1 1-1" />
+                </svg>
+              </button>
+
+              <span role="status">{{ copyStatus }}</span>
+            </div>
+          </div>
+        </article>
       </li>
     </ul>
   </div>

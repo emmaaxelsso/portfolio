@@ -1,7 +1,13 @@
 @use '../../../styles/variables' as *;
 @use '../../../styles/typography';
 
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
 .contact-page {
+  flex: 1;
   padding: $spacing-xl 0 $spacing-xxl;
   background: $light-background-color;
   color: $light-text-color;
@@ -10,9 +16,27 @@
     margin-bottom: $spacing-lg;
   }
 
+  p {
+  color: inherit;
+  }
+
   a:focus-visible {
     outline: 2px solid $accent-color;
     outline-offset: 6px;
+  }
+}
+
+.contact-page__availability {
+  margin-bottom: $spacing-lg;
+
+  span {
+    padding-inline: 0.15em;
+    background: linear-gradient(
+      transparent 55%,
+      rgba($accent-color, 0.20) 55%
+    );
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
   }
 }
 
@@ -26,32 +50,30 @@
 }
 
 .contact-page__channels {
-  max-width: 48rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: max-content;
+  max-width: 100%;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .contact-page__email {
   grid-column: 1 / -1;
+  contain: inline-size;
 
   .contact-card__value {
     font-size: clamp(1.125rem, 3vw, 1.75rem);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
   }
 }
 
 .contact-card {
   height: 100%;
   gap: $spacing-sm;
+  position: relative;
   background: $light-surface-color;
   border: 2px solid $light-border-color;
   box-shadow: $shadow-soft;
-
-  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
-    transition: transform $transition-fast;
-
-    &:hover {
-      transform: translateY(-4px);
-    }
-  }
 }
 
 .contact-card__label {
@@ -75,12 +97,60 @@
   overflow-wrap: anywhere;
 }
 
+.contact-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $spacing-sm $spacing-md;
+
+  .contact-card__value {
+    min-width: 0;
+  }
+
+  button {
+    font: inherit;
+    cursor: pointer;
+  }
+}
+
+.contact-card__copy {
+  position: relative;
+
+  [role='status'] {
+    position: absolute;
+    bottom: calc(100% + 0.4rem);
+    right: 0;
+    width: max-content;
+    max-width: 12rem;
+    font-size: 0.875rem;
+
+    &:not(:empty) {
+      padding: 0.25rem 0.6rem;
+      border-radius: 0.5rem;
+      background: $light-text-color;
+      color: $light-surface-color;
+
+      @media (prefers-reduced-motion: no-preference) {
+      animation: copy-notice-in 160ms ease-out both;
+      }
+    }
+  }
+}
+
 @media (max-width: 700px) {
   .contact-page {
     padding-block: 3rem;
   }
+}
 
-  .contact-page__channels {
-    grid-template-columns: minmax(0, 1fr);
+@keyframes copy-notice-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

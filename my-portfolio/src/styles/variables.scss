@@ -10,12 +10,24 @@ $text-muted-color: #d6d1b8;
 $border-color: #2a2a2a;
 
 // Brand / Accent
-$primary-color: #1c40cf;
+$primary-color: #1938B8;
 $secondary-color: #fcbe1d;
 $accent-color: #f83c00;
-$success-color: #017401;
 $font-color: #0a0a0a;
-$research-background-color: #f4dfe4;
+
+// Navbar & Hero
+$navbar-background-color: #0a0a0a;
+$hero-background-color: #097B34;
+
+// Section backgrounds
+$light-background-color: #fbf9ea;
+$research-background-color: #ebcbc2;
+
+// Light sections
+$light-text-color: $font-color;
+$light-border-color: $font-color;
+$light-surface-color: #ffffff;
+$light-placeholder-color: #e9e5d4;
 
 // ===========================
 // Spacing

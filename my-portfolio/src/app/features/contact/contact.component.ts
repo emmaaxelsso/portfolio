@@ -11,4 +11,24 @@ import { SocialLinkComponent } from '../../shared/components/social-link/social-
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
-export class ContactComponent {}
+export class ContactComponent {
+  readonly email = 'emmaaxelsson.ax@gmail.com';
+  copyStatus = '';
+  private copyStatusTimer?: ReturnType<typeof setTimeout>;
+
+  async copyEmail(): Promise<void> {
+    clearTimeout(this.copyStatusTimer);
+    this.copyStatus = '';
+
+    try {
+      await navigator.clipboard.writeText(this.email);
+      this.copyStatus = '✓ Copied!';
+
+      this.copyStatusTimer = setTimeout(() => {
+        this.copyStatus = '';
+      }, 3000);
+    } catch {
+      this.copyStatus = 'Couldn’t copy. Select the address to copy it manually.';
+    }
+  }
+}

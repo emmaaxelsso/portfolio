@@ -9,7 +9,7 @@
   min-height: 100vh;
   padding: $spacing-xl 0 $spacing-xxl;
   background: $research-background-color;
-  color: #111111;
+  color: #0a0a0a;
 
   p {
     color: inherit;
@@ -65,13 +65,10 @@
 
 a.research-card {
   text-decoration: none;
-  transition:
-    transform $transition-fast,
-    border-color $transition-fast;
+  transition: transform $transition-fast;
 
   &:hover {
     transform: translateY(-4px);
-    border-color: $primary-color;
   }
 }
 

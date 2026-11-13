@@ -37,6 +37,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   private resizeObserver?: ResizeObserver;
   private motionPreference?: MediaQueryList;
   private listening = false;
+  private threadCompleted = false;
 
   // Each entry connects a screen height to a distance along the path.
   private checkpoints: { distance: number; depth: number }[] = [];
@@ -170,11 +171,17 @@ private rebuildCheckpoints(): void {
 
     svg.style.clipPath = 'none';
 
-    if (window.scrollY <= 1) {
-      svg.style.opacity = '0';
-      path.style.strokeDashoffset = String(last.distance);
-      return;
-    }
+      if (this.threadCompleted) {
+        svg.style.opacity = '1';
+        path.style.strokeDashoffset = '0';
+        return;
+      }
+
+      if (window.scrollY <= 1) {
+        svg.style.opacity = '0';
+        path.style.strokeDashoffset = String(last.distance);
+        return;
+      }
 
     svg.style.opacity = '1';
 
@@ -234,6 +241,12 @@ private rebuildCheckpoints(): void {
     const finishedLength =
       visibleLength +
       (last.distance - visibleLength) * finishProgress;
+
+    if (finishProgress >= 1 || finishedLength >= last.distance - 0.5) {
+      this.threadCompleted = true;
+      path.style.strokeDashoffset = '0';
+      return;
+    }
 
     path.style.strokeDashoffset = String(
       last.distance - finishedLength

@@ -58,6 +58,8 @@
   border: 2px solid $light-border-color;
   border-radius: $radius-xl;
   box-shadow: $shadow-hard;
+  width: 90%;
+  justify-self: end;
 
   span {
     padding: $spacing-md;
@@ -73,6 +75,10 @@
 
 .about-section {
   margin-top: $spacing-xxl;
+}
+
+.about-intro + .about-section {
+  margin-top: 2rem;
 }
 
 .personal-text {
@@ -163,15 +169,6 @@
   }
 }
 
-.contact-list {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: $spacing-md;
-  margin-top: $spacing-lg;
-  overflow-wrap: anywhere;
-}
-
 .text-link {
   display: inline-flex;
   align-items: center;
@@ -226,17 +223,14 @@
     margin-bottom: 2rem;
   }
 
-  .link-arrow {
-    display: none;
-  }
-
   .about-intro {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
 
   .portrait {
-    width: min(100%, 350px);
+    width: min(90%, 330px);
+    justify-self: center;
   }
 
   .about-section {

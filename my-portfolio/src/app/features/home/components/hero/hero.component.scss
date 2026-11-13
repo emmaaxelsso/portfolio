@@ -9,14 +9,12 @@
   justify-content: flex-start;
   padding: clamp(2.5rem, 5vh, 4rem) 2rem 3rem;
   position: relative;
-  background:
-    radial-gradient(circle at 60% 10%, rgba(0, 0, 0, 0.08), transparent 35%),
-    $success-color;
+  background-color: $hero-background-color;
 }
 
 .section--next {
-  background: #fbf9ea;
-  color: #111;
+  background: $light-background-color;
+  color: $light-text-color;
 }
 
 .hero__content {
@@ -29,7 +27,7 @@
   line-height: 0.9;
   letter-spacing: -0.05em;
   margin-bottom: 1.5rem;
-  color: #000000;
+  color: $font-color;
   max-width: 10ch;
 }
 

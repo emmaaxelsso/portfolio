@@ -27,7 +27,7 @@ import { ContactPreviewComponent } from './components/contact-preview/contact-pr
     ContactPreviewComponent
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.scss'
 })
 export class HomeComponent implements AfterViewInit, OnDestroy {
   @ViewChild('threadPath')

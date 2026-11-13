@@ -9,20 +9,19 @@
 
     <h1>Contact</h1>
 
-    <p>
-      <a class="link" href="mailto:emmaaxelsson.ax@gmail.com">
-        emmaaxelsson.ax&#64;gmail.com
-      </a>
-    </p>
+    <ul class="grid contact-page__channels" aria-label="Contact and profiles">
 
-    <ul class="contact-page__profiles">
-      <li>
-        <a class="link" href="https://www.linkedin.com/in/emma-axelsson-3b94a416a">
-          LinkedIn
-        </a>
+      <li class="contact-page__profiles">
+        <app-social-link platform="linkedin"></app-social-link>
+        <app-social-link platform="github"></app-social-link>
+        <app-social-link platform="gitlab"></app-social-link>
       </li>
-      <li>
-        <a class="link" href="https://github.com/emmaaxelsso">GitHub</a>
+
+      <li class="contact-page__email">
+        <a appCard class="contact-card" href="mailto:emmaaxelsson.ax@gmail.com">
+          <span class="contact-card__label">Email</span>
+          <span class="contact-card__value">emmaaxelsson.ax&#64;gmail.com</span>
+        </a>
       </li>
     </ul>
   </div>

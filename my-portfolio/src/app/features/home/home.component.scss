@@ -29,11 +29,6 @@
 
 @media (max-width: 768px) {
   .home__thread {
-    inset-inline: 1rem;
-  }
-
-  .home__thread-path {
-    stroke-width: 3px;
-    stroke-opacity: 0.3;
+    display: none;
   }
 }

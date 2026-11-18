@@ -2,6 +2,11 @@
   display: grid;
   min-height: 100dvh;
   grid-template-rows: auto 1fr auto;
+  grid-template-columns: minmax(0, 1fr);
+
+> * {
+  min-width: 0;
+}
 }
 
 router-outlet {

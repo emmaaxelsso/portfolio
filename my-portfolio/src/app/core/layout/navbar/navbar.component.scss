@@ -51,3 +51,24 @@
     font-size: 0.95rem;
   }
 }
+
+@media (max-width: 700px) {
+  .navbar {
+    height: auto;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .navbar__links {
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+    }
+  }
+}

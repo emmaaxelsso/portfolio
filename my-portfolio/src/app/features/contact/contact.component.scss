@@ -139,7 +139,41 @@
 
 @media (max-width: 700px) {
   .contact-page {
-    padding-block: 3rem;
+    padding-block: 2rem 3rem;
+
+    h1 {
+      margin-bottom: $spacing-md;
+    }
+  }
+
+  .contact-page__channels {
+    width: max-content;
+    max-width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contact-page__profiles {
+    gap: $spacing-sm;
+  }
+
+  .contact-page__email {
+    min-width: 0;
+  }
+
+  .contact-card {
+    padding: $spacing-md;
+  }
+
+  .contact-card__actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: $spacing-sm;
+    width: 100%;
+  }
+
+  .contact-card__copy button:focus-visible {
+    outline: 2px solid $accent-color;
+    outline-offset: 3px;
   }
 }
 

@@ -60,7 +60,7 @@
   contain: inline-size;
 
   .contact-card__value {
-    font-size: clamp(1.125rem, 3vw, 1.75rem);
+    font-size: clamp(1.125rem, calc(5cqi - 0.25rem), 1.75rem);
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 0.18em;
@@ -71,6 +71,7 @@
   height: 100%;
   gap: $spacing-sm;
   position: relative;
+  container-type: inline-size;
   background: $light-surface-color;
   border: 2px solid $light-border-color;
   box-shadow: $shadow-soft;
@@ -99,12 +100,16 @@
 
 .contact-card__actions {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
-  gap: $spacing-sm $spacing-md;
+  gap: $spacing-sm;
 
   .contact-card__value {
     min-width: 0;
+  }
+
+  .contact-card__copy {
+    flex-shrink: 0;
   }
 
   button {
@@ -165,8 +170,6 @@
   }
 
   .contact-card__actions {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
     gap: $spacing-sm;
     width: 100%;
   }
